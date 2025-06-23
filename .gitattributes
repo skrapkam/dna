@@ -1,2 +1,11 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
+# Ensure images are tracked as regular files for Vercel deployment
+*.jpg -filter=lfs -diff=lfs -merge=lfs -text
+*.jpeg -filter=lfs -diff=lfs -merge=lfs -text
+*.png -filter=lfs -diff=lfs -merge=lfs -text
+*.gif -filter=lfs -diff=lfs -merge=lfs -text
+*.ico -filter=lfs -diff=lfs -merge=lfs -text
+
+# Keep other binary files as LFS if needed
+*.pdf filter=lfs diff=lfs merge=lfs -text
 *.mp3 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
