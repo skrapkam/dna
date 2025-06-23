@@ -5,15 +5,5 @@
       "src": "**/*",
       "use": "@vercel/static"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*\\.(jpg|jpeg|png|gif|ico|css|js|html|htm))",
-      "destination": "/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
   ]
 } 
