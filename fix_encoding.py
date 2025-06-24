@@ -1,78 +1,70 @@
 #!/usr/bin/env python3
-"""
-Fix character encoding declarations in HTML files.
-Changes gb2312 and gb18030 to utf-8 for proper Chinese character display.
-"""
-
+import sys
 import os
-import re
-import glob
+import codecs
 
-def fix_encoding_in_file(filepath):
-    """Fix encoding declaration in a single HTML file."""
-    try:
-        with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-            content = f.read()
-        
-        # Track if we made changes
-        original_content = content
-        
-        # Fix various encoding declarations
-        patterns = [
-            # Fix gb2312
-            (r'charset=gb2312', 'charset=utf-8'),
-            (r'charset=gb18030', 'charset=utf-8'),
-            # Fix Content-Type declarations
-            (r'<meta http-equiv=Content-Type content="text/html; charset=gb2312">', 
-             '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'),
-            (r'<meta http-equiv=Content-Type content="text/html; charset=gb18030">', 
-             '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'),
-            # Fix META declarations
-            (r'<META http-equiv=Content-Type content="text/html; charset=gb2312">', 
-             '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'),
-            (r'<META http-equiv=Content-Type content="text/html; charset=gb18030">', 
-             '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'),
-        ]
-        
-        for pattern, replacement in patterns:
-            content = re.sub(pattern, replacement, content, flags=re.IGNORECASE)
-        
-        # Add UTF-8 declaration if none exists
-        if 'charset=utf-8' not in content.lower() and 'charset' not in content.lower():
-            # Find the head tag and add meta charset
-            head_match = re.search(r'<head[^>]*>', content, re.IGNORECASE)
-            if head_match:
-                charset_meta = '<meta charset="utf-8">'
-                content = content[:head_match.end()] + '\n\t' + charset_meta + content[head_match.end():]
-        
-        # Write back if changes were made
-        if content != original_content:
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(content)
-            return True
-        
-        return False
-        
-    except Exception as e:
-        print(f"Error processing {filepath}: {e}")
-        return False
+def detect_and_fix_encoding(filename):
+    """Detect and fix encoding issues in HTML files."""
+    
+    # Read the file as bytes first
+    with open(filename, 'rb') as f:
+        content_bytes = f.read()
+    
+    # Try different encodings to see which one works
+    encodings_to_try = ['gb18030', 'gbk', 'gb2312', 'utf-8', 'latin1']
+    
+    for encoding in encodings_to_try:
+        try:
+            # Try to decode with this encoding
+            content = content_bytes.decode(encoding)
+            
+            # Check if we can find Chinese characters
+            if any('\u4e00' <= char <= '\u9fff' for char in content):
+                print(f"Found Chinese characters with {encoding} encoding")
+                
+                # Create backup
+                backup_filename = filename + '.backup2'
+                os.rename(filename, backup_filename)
+                print(f"Created backup: {backup_filename}")
+                
+                # Write with UTF-8 encoding
+                with open(filename, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                # Update the meta tag
+                with open(filename, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                content = content.replace('charset=gb18030', 'charset=utf-8')
+                content = content.replace('charset=gbk', 'charset=utf-8')
+                content = content.replace('charset=gb2312', 'charset=utf-8')
+                
+                with open(filename, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                print(f"Successfully converted {filename} using {encoding} as source")
+                return True
+                
+        except UnicodeDecodeError:
+            continue
+        except Exception as e:
+            print(f"Error with {encoding}: {e}")
+            continue
+    
+    print(f"Could not find proper encoding for {filename}")
+    return False
 
 def main():
-    """Main function to fix encoding in all HTML files."""
-    # Find all HTML files
-    html_files = []
-    for pattern in ['*.html', '**/*.html']:
-        html_files.extend(glob.glob(pattern, recursive=True))
+    files_to_fix = ['WHY1.html', 'WHY.html']
     
-    print(f"Found {len(html_files)} HTML files")
-    
-    fixed_count = 0
-    for filepath in html_files:
-        if fix_encoding_in_file(filepath):
-            print(f"Fixed encoding in: {filepath}")
-            fixed_count += 1
-    
-    print(f"\nFixed encoding in {fixed_count} files")
+    for filename in files_to_fix:
+        if os.path.exists(filename):
+            print(f"\nFixing {filename}...")
+            success = detect_and_fix_encoding(filename)
+            if not success:
+                print(f"Failed to fix {filename}")
+        else:
+            print(f"File {filename} not found")
 
 if __name__ == "__main__":
     main() 
