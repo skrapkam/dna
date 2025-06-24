@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Display Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .image-test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        img { max-width: 200px; max-height: 200px; border: 1px solid #ddd; }
+        .status { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Image Display Test</h1>
+    <p>This page tests all images referenced in indexEN.html</p>
+
+    <div class="image-test" id="test1">
+        <h3>1. NAMEtoEN.jpg</h3>
+        <div class="status">Status: <span id="status1">Loading...</span></div>
+        <img src="NAMEtoEN.jpg" alt="NAMEtoEN" onload="document.getElementById('status1').innerHTML='✅ Loaded'" onerror="document.getElementById('status1').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test2">
+        <h3>2. DNA-NCBItoE.jpg</h3>
+        <div class="status">Status: <span id="status2">Loading...</span></div>
+        <img src="DNA-NCBItoE.jpg" alt="DNA-NCBItoE" onload="document.getElementById('status2').innerHTML='✅ Loaded'" onerror="document.getElementById('status2').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test3">
+        <h3>3. ENT2-P1_files/B1_cover.jpg</h3>
+        <div class="status">Status: <span id="status3">Loading...</span></div>
+        <img src="ENT2-P1_files/B1_cover.jpg" alt="B1_cover" onload="document.getElementById('status3').innerHTML='✅ Loaded'" onerror="document.getElementById('status3').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test4">
+        <h3>4. ENT2-P1_files/B2_cover.jpg</h3>
+        <div class="status">Status: <span id="status4">Loading...</span></div>
+        <img src="ENT2-P1_files/B2_cover.jpg" alt="B2_cover" onload="document.getElementById('status4').innerHTML='✅ Loaded'" onerror="document.getElementById('status4').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test5">
+        <h3>5. ENT2-P1_files/B3_cover.jpg</h3>
+        <div class="status">Status: <span id="status5">Loading...</span></div>
+        <img src="ENT2-P1_files/B3_cover.jpg" alt="B3_cover" onload="document.getElementById('status5').innerHTML='✅ Loaded'" onerror="document.getElementById('status5').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test6">
+        <h3>6. 00d.jpg</h3>
+        <div class="status">Status: <span id="status6">Loading...</span></div>
+        <img src="00d.jpg" alt="00d" onload="document.getElementById('status6').innerHTML='✅ Loaded'" onerror="document.getElementById('status6').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test7">
+        <h3>7. GaogenE.jpg</h3>
+        <div class="status">Status: <span id="status7">Loading...</span></div>
+        <img src="GaogenE.jpg" alt="GaogenE" onload="document.getElementById('status7').innerHTML='✅ Loaded'" onerror="document.getElementById('status7').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test8">
+        <h3>8. zhongwenE.jpg</h3>
+        <div class="status">Status: <span id="status8">Loading...</span></div>
+        <img src="zhongwenE.jpg" alt="zhongwenE" onload="document.getElementById('status8').innerHTML='✅ Loaded'" onerror="document.getElementById('status8').innerHTML='❌ Failed to load'; this.parentElement.className='image-test error';">
+    </div>
+
+    <div class="image-test" id="test9">
+        <h3>9. File existence check</h3>
+        <div id="file-check">
+            <p>Checking if files exist on server...</p>
+        </div>
+    </div>
+
+    <script>
+        // Check file existence
+        const files = [
+            'NAMEtoEN.jpg',
+            'DNA-NCBItoE.jpg', 
+            'ENT2-P1_files/B1_cover.jpg',
+            'ENT2-P1_files/B2_cover.jpg',
+            'ENT2-P1_files/B3_cover.jpg',
+            '00d.jpg',
+            'GaogenE.jpg',
+            'zhongwenE.jpg'
+        ];
+
+        async function checkFiles() {
+            const fileCheck = document.getElementById('file-check');
+            fileCheck.innerHTML = '<p>Checking files...</p>';
+            
+            for (const file of files) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    const status = response.ok ? '✅ Exists' : '❌ Not found';
+                    fileCheck.innerHTML += `<p>${file}: ${status}</p>`;
+                } catch (error) {
+                    fileCheck.innerHTML += `<p>${file}: ❌ Error - ${error.message}</p>`;
+                }
+            }
+        }
+
+        // Run file check after page loads
+        window.addEventListener('load', checkFiles);
+    </script>
+</body>
+</html> 
