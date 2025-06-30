@@ -1,0 +1,629 @@
+/* DNA Decoding Website - U.S. Graphics Inspired Design */
+
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --accent-color: #0066cc;
+  --text-color: #000000;
+  --light-bg: #ffffff;
+  --white: #ffffff;
+  --border-color: #000000;
+  --shadow: none;
+  --border-radius: 0px;
+  --transition: none;
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography - Dense and Explicit */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 { 
+  font-size: 24px; 
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+h2 { 
+  font-size: 20px; 
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 3px;
+}
+h3 { 
+  font-size: 18px; 
+  text-decoration: underline;
+}
+h4 { 
+  font-size: 16px; 
+  font-weight: bold;
+}
+h5 { 
+  font-size: 14px; 
+  font-weight: bold;
+}
+h6 { 
+  font-size: 12px; 
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+/* Layout Components - Flat and Functional */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: var(--white);
+  color: var(--text-color);
+  padding: 10px 0;
+  border-bottom: 3px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: block;
+  text-align: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  justify-content: center;
+  margin-top: 10px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 5px 0;
+}
+
+.nav a {
+  color: var(--text-color);
+  padding: 5px 15px;
+  border-right: 1px solid var(--border-color);
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.nav a:last-child {
+  border-right: none;
+}
+
+.nav a:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Main Content - Dense Information Layout */
+.main {
+  min-height: auto;
+  padding: 0;
+}
+
+.content-grid {
+  display: block;
+  margin-top: 0;
+}
+
+.sidebar {
+  background: var(--white);
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.main-content {
+  background: var(--white);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+/* Cards - Functional and Explicit */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.card-header {
+  background: var(--text-color);
+  color: var(--white);
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-footer {
+  background: var(--light-bg);
+  padding: 10px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+}
+
+/* Buttons - Functional Design */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  background: var(--white);
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: var(--text-color);
+  color: var(--white);
+  border: 1px solid var(--text-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  background: var(--white);
+  color: var(--text-color);
+  padding: 20px 0;
+  border-top: 3px solid var(--border-color);
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-content {
+  display: block;
+  text-align: center;
+}
+
+.language-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.lang-btn {
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.lang-btn:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 5px; }
+.mb-2 { margin-bottom: 10px; }
+.mb-3 { margin-bottom: 15px; }
+.mb-4 { margin-bottom: 20px; }
+
+.mt-1 { margin-top: 5px; }
+.mt-2 { margin-top: 10px; }
+.mt-3 { margin-top: 15px; }
+.mt-4 { margin-top: 20px; }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+/* DNA Sequence Display */
+.dna-sequence {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--light-bg);
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.dna-sequence span {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* Book Grid - Dense Layout */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.book-item {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  background: var(--white);
+  text-align: center;
+}
+
+.book-item:hover {
+  background: var(--light-bg);
+}
+
+.book-cover {
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.book-title a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.book-price {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.book-desc {
+  font-size: 11px;
+  color: var(--secondary-color);
+  line-height: 1.3;
+}
+
+/* Article Grid - Functional Layout */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.article-item {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.article-num {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 15px;
+  color: var(--accent-color);
+  min-width: 40px;
+}
+
+.article-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.article-title a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.article-title a:hover {
+  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+.article-line {
+  width: 20px;
+  height: 2px;
+  background: var(--border-color);
+  margin-left: 10px;
+}
+
+/* Resources Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.resource-item {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  background: var(--white);
+  text-align: center;
+}
+
+.resource-item:hover {
+  background: var(--light-bg);
+}
+
+.resource-item img {
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.resource-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.resource-title a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.resource-desc {
+  font-size: 11px;
+  color: var(--secondary-color);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.resource-links {
+  font-size: 11px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.resource-links a {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.resource-links a:hover {
+  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+/* Reading Guides */
+.reading-guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.reading-guide-card {
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  background: var(--white);
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+
+.reading-guide-card:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+}
+
+.reading-guide-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.reading-guide-desc {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Table Styling - Functional and Dense */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
+  font-size: 12px;
+}
+
+table, th, td {
+  border: 1px solid var(--border-color);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--text-color);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* Marquee Styling */
+marquee {
+  border: 2px solid var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+/* Responsive Design - Maintains Dense Layout */
+@media (max-width: 900px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .book-item {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-item {
+    padding: 15px;
+  }
+  
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .reading-guides {
+    grid-template-columns: 1fr;
+  }
+  
+  .reading-guide-card {
+    padding: 15px;
+  }
+}
+
+/* Footer Contact */
+.footer-contact {
+  text-align: center;
+  margin: 20px 0 15px 0;
+  color: var(--text-color);
+  font-size: 12px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+}
+
+/* Text News Links */
+.textnews {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.textnews:hover {
+  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+} 
