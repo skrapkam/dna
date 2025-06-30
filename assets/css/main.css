@@ -24,8 +24,8 @@
 
 body {
   font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.5;
   color: var(--text-color);
   background-color: var(--light-bg);
   margin: 0;
@@ -38,50 +38,53 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
   color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 h1 { 
-  font-size: 24px; 
+  font-size: 32px; 
   border-bottom: 2px solid var(--border-color);
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
 }
 h2 { 
-  font-size: 20px; 
+  font-size: 28px; 
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 3px;
+  padding-bottom: 5px;
 }
 h3 { 
-  font-size: 18px; 
+  font-size: 24px; 
   text-decoration: underline;
 }
 h4 { 
-  font-size: 16px; 
+  font-size: 20px; 
   font-weight: bold;
 }
 h5 { 
-  font-size: 14px; 
+  font-size: 18px; 
   font-weight: bold;
 }
 h6 { 
-  font-size: 12px; 
+  font-size: 16px; 
   font-weight: bold;
 }
 
 p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   text-align: justify;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: underline;
   font-weight: bold;
+  font-size: 18px;
 }
 
 a:hover {
@@ -100,9 +103,9 @@ a:hover {
 .header {
   background: var(--white);
   color: var(--text-color);
-  padding: 10px 0;
+  padding: 15px 0;
   border-bottom: 3px solid var(--border-color);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .header-content {
@@ -111,7 +114,7 @@ a:hover {
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -123,20 +126,20 @@ a:hover {
   gap: 0;
   list-style: none;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 15px;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 5px 0;
+  padding: 8px 0;
 }
 
 .nav a {
   color: var(--text-color);
-  padding: 5px 15px;
+  padding: 8px 20px;
   border-right: 1px solid var(--border-color);
   text-decoration: none;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .nav a:last-child {
@@ -162,14 +165,14 @@ a:hover {
 
 .sidebar {
   background: var(--white);
-  padding: 15px;
+  padding: 20px;
   border: 1px solid var(--border-color);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .main-content {
   background: var(--white);
-  padding: 20px;
+  padding: 25px;
   border: 1px solid var(--border-color);
 }
 
@@ -178,7 +181,7 @@ a:hover {
   background: var(--white);
   border: 1px solid var(--border-color);
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .card:hover {
@@ -189,31 +192,31 @@ a:hover {
 .card-header {
   background: var(--text-color);
   color: var(--white);
-  padding: 10px;
+  padding: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .card-body {
-  padding: 15px;
+  padding: 20px;
 }
 
 .card-footer {
   background: var(--light-bg);
-  padding: 10px;
+  padding: 15px;
   border-top: 1px solid var(--border-color);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* Buttons - Functional Design */
 .btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 12px 20px;
   border: 1px solid var(--border-color);
   text-decoration: none;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   background: var(--white);
   color: var(--text-color);
@@ -250,11 +253,11 @@ a:hover {
 .footer {
   background: var(--white);
   color: var(--text-color);
-  padding: 20px 0;
+  padding: 25px 0;
   border-top: 3px solid var(--border-color);
-  margin-top: 30px;
+  margin-top: 40px;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .footer-content {
@@ -270,12 +273,12 @@ a:hover {
 }
 
 .lang-btn {
-  padding: 5px 10px;
+  padding: 8px 15px;
   border: 1px solid var(--border-color);
   background: var(--white);
   color: var(--text-color);
   text-decoration: none;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -306,12 +309,12 @@ a:hover {
 /* DNA Sequence Display */
 .dna-sequence {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 16px;
   background: var(--light-bg);
-  padding: 10px;
+  padding: 15px;
   border: 1px solid var(--border-color);
-  margin: 10px 0;
-  line-height: 1.2;
+  margin: 15px 0;
+  line-height: 1.4;
 }
 
 .dna-sequence span {
@@ -344,8 +347,8 @@ a:hover {
 
 .book-title {
   font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 
@@ -357,14 +360,14 @@ a:hover {
 .book-price {
   font-weight: bold;
   color: var(--accent-color);
-  font-size: 12px;
-  margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 .book-desc {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--secondary-color);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 /* Article Grid - Functional Layout */
@@ -385,16 +388,16 @@ a:hover {
 
 .article-num {
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: 20px;
   color: var(--accent-color);
-  min-width: 40px;
+  min-width: 50px;
 }
 
 .article-title {
   flex: 1;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -443,8 +446,8 @@ a:hover {
 
 .resource-title {
   font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 
@@ -454,16 +457,16 @@ a:hover {
 }
 
 .resource-desc {
-  font-size: 11px;
+  font-size: 16px;
   color: var(--secondary-color);
-  line-height: 1.3;
-  margin-bottom: 10px;
+  line-height: 1.4;
+  margin-bottom: 15px;
 }
 
 .resource-links {
-  font-size: 11px;
-  margin-top: 10px;
-  padding-top: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+  padding-top: 15px;
   border-top: 1px solid var(--border-color);
 }
 
@@ -505,23 +508,23 @@ a:hover {
 
 .reading-guide-title {
   font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   text-decoration: underline;
 }
 
 .reading-guide-desc {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 /* Table Styling - Functional and Dense */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 15px 0;
-  font-size: 12px;
+  margin: 20px 0;
+  font-size: 16px;
 }
 
 table, th, td {
@@ -539,18 +542,24 @@ th {
   color: var(--white);
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 16px;
 }
 
 /* Marquee Styling */
 marquee {
-  border: 2px solid var(--accent-color);
+  /* border: 2px solid var(--accent-color); */
   background: var(--accent-color);
   color: var(--white);
-  padding: 10px;
+  padding: 15px;
   font-family: var(--font-mono);
-  font-size: 11px;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  white-space: nowrap;
 }
 
 /* Responsive Design - Maintains Dense Layout */
@@ -608,11 +617,11 @@ marquee {
 /* Footer Contact */
 .footer-contact {
   text-align: center;
-  margin: 20px 0 15px 0;
+  margin: 25px 0 20px 0;
   color: var(--text-color);
-  font-size: 12px;
+  font-size: 16px;
   border-top: 1px solid var(--border-color);
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 /* Text News Links */
@@ -620,10 +629,189 @@ marquee {
   color: var(--text-color);
   text-decoration: underline;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .textnews:hover {
   color: var(--accent-color);
   background: var(--accent-color);
   color: var(--white);
+}
+
+/* Override Microsoft Word-generated styles for consistent font sizes */
+.MsoNormal,
+.MsoNormal p,
+p.MsoNormal {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Override bold font-weight for main content */
+.main-content h3,
+.main-content h4 {
+  font-weight: normal !important;
+}
+
+/* Override inline font-size styles */
+[style*="font-size"] {
+  font-size: 18px !important;
+}
+
+/* Specific overrides for common Word-generated font sizes */
+[style*="font-size:14.0pt"],
+[style*="font-size:14pt"],
+[style*="font-size:11.0pt"],
+[style*="font-size:11pt"],
+[style*="font-size:12.0pt"],
+[style*="font-size:12pt"] {
+  font-size: 18px !important;
+}
+
+/* Override larger Word-generated font sizes to be consistent */
+[style*="font-size:16.0pt"],
+[style*="font-size:16pt"],
+[style*="font-size:18.0pt"],
+[style*="font-size:18pt"],
+[style*="font-size:20.0pt"],
+[style*="font-size:20pt"] {
+  font-size: 20px !important;
+}
+
+/* Ensure all text elements have consistent sizing */
+span, div, p, td, th, li {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Override for headings in Word-generated content */
+[style*="font-size:18.0pt"][style*="color:blue"],
+[style*="font-size:18pt"][style*="color:blue"] {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+/* Ensure Chinese text is readable */
+[lang="ZH-CN"], 
+[lang="zh-CN"],
+span[lang="ZH-CN"],
+span[lang="zh-CN"] {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Additional overrides for more specific patterns */
+[style*="font-size:8.0pt"],
+[style*="font-size:8pt"],
+[style*="font-size:10.0pt"],
+[style*="font-size:10pt"],
+[style*="font-size:13.5pt"] {
+  font-size: 18px !important;
+}
+
+/* Override mso-specific font sizes */
+[style*="mso-ansi-font-size"],
+[style*="mso-bidi-font-size"] {
+  font-size: 18px !important;
+}
+
+/* Ensure all Word-generated content uses consistent sizing */
+.MsoNormalTable,
+.MsoNormalTable td,
+.MsoNormalTable th,
+.MsoNormalTable p {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Override any remaining small font sizes */
+[style*="font-size:11.0pt"],
+[style*="font-size:11pt"],
+[style*="font-size:12.0pt"],
+[style*="font-size:12pt"] {
+  font-size: 18px !important;
+}
+
+/* Ensure headings in Word content are properly sized */
+[style*="font-size:18.0pt"][style*="color:blue"],
+[style*="font-size:18pt"][style*="color:blue"],
+[style*="font-size:16.0pt"][style*="color:blue"],
+[style*="font-size:16pt"][style*="color:blue"] {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+/* Override any font-size declarations in style attributes */
+*[style*="font-size"] {
+  font-size: 18px !important;
+}
+
+/* Exception for headings - allow them to be larger */
+h1[style*="font-size"],
+h2[style*="font-size"],
+h3[style*="font-size"],
+h4[style*="font-size"],
+h5[style*="font-size"],
+h6[style*="font-size"] {
+  font-size: inherit !important;
+}
+
+.header-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-book img,
+.header-dna img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.header-logo {
+  text-align: center;
+}
+.header-title {
+  font-size: 1.2em;
+  margin-top: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.header-subtitle {
+  font-size: 1em;
+  color: #ff9900;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.header-dna {
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .header-main-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .header-logo, .header-dna, .header-book {
+    text-align: center;
+  }
+}
+.language-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.main-article h3, .main-article h4 {
+  text-transform: none !important;
+  font-weight: normal !important;
 } 
