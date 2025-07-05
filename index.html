@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Decoding Science Alliance | DNA解码科学與信仰联盟</title>
+    <link href="assets/css/layout-styles.css" type="text/css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .language-selector {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        .logo {
+            margin-bottom: 30px;
+        }
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .language-options {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .language-option {
+            display: block;
+            text-decoration: none;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px 40px;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+        .language-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+        .language-flag {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .language-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .language-desc {
+            font-size: 14px;
+            color: #666;
+            display: block;
+        }
+        .dna-sequence {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+            letter-spacing: 2px;
+        }
+        @media (max-width: 768px) {
+            .language-selector {
+                padding: 40px 30px;
+            }
+            .language-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            .language-option {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <div class="logo">
+            <img src="assets/images/DNA-NCBI.jpg" alt="DNA Decoding Science Alliance" />
+        </div>
+        
+        <h1 class="title">DNA Decoding Science Alliance</h1>
+        <h2 class="subtitle">DNA解码科学與信仰联盟</h2>
+        
+        <p style="color: #666; margin-bottom: 40px;">
+            Welcome to the DNA Decoding Science Alliance website.<br>
+            Please choose your preferred language to continue.
+        </p>
+        
+        <div class="language-options">
+            <a href="zh/index.html" class="language-option">
+                <span class="language-flag">🇨🇳</span>
+                <span class="language-name">中文</span>
+                <span class="language-desc">Chinese Version<br>中文版本</span>
+            </a>
+            
+            <a href="en/index.html" class="language-option">
+                <span class="language-flag">🇺🇸</span>
+                <span class="language-name">English</span>
+                <span class="language-desc">English Version<br>英文版本</span>
+            </a>
+        </div>
+        
+        <div class="dna-sequence">
+            AGTCACAATG ACCTTGCACA ATACTCCTGG ATACAGCCCC TCCGCAGCTA
+        </div>
+        
+        <p style="font-size: 12px; color: #999; margin-top: 20px;">
+            Modern science has determined that hereditary information of all living species<br>
+            is totally defined by its own DNA coding sequences.
+        </p>
+    </div>
+</body>
+</html>
