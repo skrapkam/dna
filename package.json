@@ -8,7 +8,24 @@
     "verify-images": "node -e \"const fs=require('fs'); const files=fs.readdirSync('.').filter(f=>f.match(/\\.(jpg|png|gif)$/i)); files.forEach(f=>{const stat=fs.statSync(f); if(stat.size<1000) console.log('Warning: Small image file:', f, stat.size+' bytes');});\"",
     "deploy": "vercel --prod"
   },
-  "keywords": ["dna", "anthropology", "science", "static-site"],
+  "keywords": [
+    "dna",
+    "anthropology",
+    "science",
+    "static-site"
+  ],
   "author": "Victor Chang",
-  "license": "MIT"
-} 
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skrapkam/dna.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skrapkam/dna/issues"
+  },
+  "homepage": "https://github.com/skrapkam/dna#readme",
+  "dependencies": {
+    "glob": "^11.0.3"
+  }
+}
