@@ -1,0 +1,1254 @@
+/* DNA Decoding Website - U.S. Graphics Inspired Design */
+
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-sans) !important;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --accent-color: #0066cc;
+  --text-color: #000000;
+  --light-bg: #ffffff;
+  --white: #ffffff;
+  --border-color: #000000;
+  --shadow: none;
+  --border-radius: 0px;
+  --transition: none;
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography - Dense and Explicit */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 { 
+  font-size: 32px; 
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+h2 { 
+  font-size: 28px; 
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+h3 { 
+  font-size: 24px; 
+  text-decoration: underline;
+}
+h4 { 
+  font-size: 20px; 
+  font-weight: bold;
+}
+h5 { 
+  font-size: 18px; 
+  font-weight: bold;
+}
+h6 { 
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+a:hover {
+  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+/* Layout Components - Flat and Functional */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: var(--white);
+  color: var(--text-color);
+  padding: 15px 0;
+  border-bottom: 3px solid var(--border-color);
+  margin-bottom: 25px;
+}
+
+.header-content {
+  display: block;
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  justify-content: center;
+  margin-top: 15px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 0;
+}
+
+.nav a {
+  color: var(--text-color);
+  padding: 8px 20px;
+  border-right: 1px solid var(--border-color);
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.nav a:last-child {
+  border-right: none;
+}
+
+.nav a:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Main Content - Dense Information Layout */
+.main {
+  min-height: auto;
+  padding: 0;
+}
+
+.content-grid {
+  display: block;
+  margin-top: 0;
+}
+
+.sidebar {
+  background: var(--white);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 25px;
+}
+
+.main-content {
+  background: var(--white);
+  padding: 25px;
+  border: 1px solid var(--border-color);
+}
+
+/* Cards - Functional and Explicit */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.card-header {
+  background: var(--text-color);
+  color: var(--white);
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  background: var(--light-bg);
+  padding: 15px;
+  border-top: 1px solid var(--border-color);
+  font-size: 16px;
+}
+
+/* Buttons - Functional Design */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  background: var(--white);
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: var(--text-color);
+  color: var(--white);
+  border: 1px solid var(--text-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  background: var(--white);
+  color: var(--text-color);
+  padding: 25px 0;
+  border-top: 3px solid var(--border-color);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer-content {
+  display: block;
+  text-align: center;
+}
+
+.language-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.lang-btn {
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.lang-btn:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 5px; }
+.mb-2 { margin-bottom: 10px; }
+.mb-3 { margin-bottom: 15px; }
+.mb-4 { margin-bottom: 20px; }
+
+.mt-1 { margin-top: 5px; }
+.mt-2 { margin-top: 10px; }
+.mt-3 { margin-top: 15px; }
+.mt-4 { margin-top: 20px; }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+/* DNA Sequence Display */
+.dna-sequence {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  background: var(--light-bg);
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+.dna-sequence span {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* Book Grid - Dense Layout */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.book-item {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  background: var(--white);
+  text-align: center;
+}
+
+.book-item:hover {
+  background: var(--light-bg);
+}
+
+.book-cover {
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.book-title a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.book-price {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.book-desc {
+  font-size: 14px;
+  color: var(--secondary-color);
+  line-height: 1.4;
+}
+
+/* Article Grid - Functional Layout */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.article-item {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.article-num {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: var(--accent-color);
+  min-width: 50px;
+}
+
+.article-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.article-title a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.article-title a:hover {
+  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+.article-line {
+  width: 20px;
+  height: 2px;
+  background: var(--border-color);
+  margin-left: 10px;
+}
+
+/* Resources Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.resource-item {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  background: var(--white);
+  text-align: center;
+}
+
+.resource-item:hover {
+  background: var(--light-bg);
+}
+
+.resource-item img {
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.resource-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.resource-title a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.resource-desc {
+  font-size: 16px;
+  color: var(--secondary-color);
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.resource-links {
+  font-size: 16px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.resource-links a {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.resource-links a:hover {
+  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+/* Reading Guides */
+.reading-guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.reading-guide-card {
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  background: var(--white);
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+
+.reading-guide-card:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+}
+
+.reading-guide-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.reading-guide-desc {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Table Styling - Functional and Dense */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+table, th, td {
+  border: 1px solid var(--border-color);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--text-color);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* Marquee Styling */
+marquee {
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 15px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+/* Responsive Design - Maintains Dense Layout */
+@media (max-width: 900px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .book-item {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-item {
+    padding: 15px;
+  }
+  
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-item {
+    padding: 15px;
+  }
+  
+  /* Mobile header refinements */
+  .header-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: grid !important;
+  }
+  
+  .header-book {
+    order: 1;
+    width: 100%;
+  }
+  
+  .header-book img {
+    max-width: 120px !important;
+    border: 1px solid #ccc;
+    min-height: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .header-logo {
+    order: 2;
+    width: 100%;
+  }
+  
+  .header-logo img {
+    max-width: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .header-title {
+    font-size: 1.4em;
+    margin-top: 12px;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .header-subtitle {
+    font-size: 1.2em;
+    margin-top: 6px;
+    color: #ff9900;
+    font-weight: bold;
+  }
+  
+  .header-dna {
+    order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-dna img {
+    max-width: 160px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Language navigation for mobile */
+  .language-nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .lang-btn {
+    font-size: 16px;
+    padding: 10px 14px;
+    border: 1px solid #000;
+    background: white;
+    color: #000;
+    text-decoration: none;
+    border-radius: 2px;
+    min-width: 80px;
+  }
+  
+  .lang-btn:hover {
+    background: #0066cc;
+    color: white;
+  }
+  
+  /* Adjust marquee for very small screens - make it bigger */
+  marquee {
+    height: 140px !important;
+    font-size: 14px !important;
+    background-color: #0066cc !important;
+    color: white !important;
+    padding: 15px !important;
+    margin: 15px auto !important;
+    max-width: 95% !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    width: auto !important;
+    display: block !important;
+    border-radius: 4px !important;
+  }
+  
+  /* Override any inline marquee styles */
+  marquee[height] {
+    height: 140px !important;
+  }
+  
+  marquee[width] {
+    width: auto !important;
+    max-width: 95% !important;
+  }
+  
+  /* Make Home link larger for mobile */
+  .home-link {
+    font-size: 20px;
+    padding: 12px 0;
+    margin-bottom: 15px;
+  }
+  
+  /* Increase body font size for mobile */
+  body {
+    font-size: 20px;
+    padding: 15px;
+  }
+  
+  /* Increase paragraph font size for mobile */
+  p {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  
+  /* Increase link font size for mobile */
+  a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .reading-guides {
+    grid-template-columns: 1fr;
+  }
+  
+  .reading-guide-card {
+    padding: 15px;
+  }
+  
+  /* Mobile header adjustments */
+  .header-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    text-align: center;
+    max-width: 100%;
+    display: grid !important;
+  }
+  
+  .header-book {
+    order: 1;
+    width: 100%;
+  }
+  
+  .header-book img {
+    max-width: 160px !important;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc;
+    min-height: 120px;
+    object-fit: cover;
+  }
+  
+  .header-logo {
+    order: 2;
+    width: 100%;
+  }
+  
+  .header-logo img {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .header-title {
+    font-size: 1.5em;
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000000;
+  }
+  
+  .header-subtitle {
+    font-size: 1.3em;
+    margin-top: 8px;
+    color: #ff9900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  
+  .header-dna {
+    order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-dna img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Adjust marquee for mobile - centered and above language nav - make it bigger */
+  marquee {
+    height: 160px !important;
+    font-size: 16px !important;
+    background-color: #0066cc !important;
+    color: white !important;
+    padding: 18px !important;
+    border-radius: 4px !important;
+    margin: 15px auto !important;
+    display: block !important;
+    max-width: 95% !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    width: auto !important;
+  }
+  
+  /* Override any inline marquee styles */
+  marquee[height] {
+    height: 160px !important;
+  }
+  
+  marquee[width] {
+    width: auto !important;
+    max-width: 95% !important;
+  }
+  
+  /* Make Home link larger for mobile */
+  .home-link {
+    font-size: 20px;
+    padding: 12px 0;
+    margin-bottom: 15px;
+  }
+  
+  /* Increase body font size for mobile */
+  body {
+    font-size: 20px;
+    padding: 15px;
+  }
+  
+  /* Increase paragraph font size for mobile */
+  p {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  
+  /* Increase link font size for mobile */
+  a {
+    font-size: 20px;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .header-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: grid !important;
+  }
+  
+  .header-book {
+    order: 1;
+    width: 100%;
+  }
+  
+  .header-book img {
+    max-width: 100px !important;
+    min-height: 80px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .header-logo {
+    order: 2;
+    width: 100%;
+  }
+  
+  .header-logo img {
+    max-width: 220px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .header-title {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #000000;
+  }
+  
+  .header-subtitle {
+    font-size: 1.1em;
+    margin-top: 5px;
+  }
+  
+  .header-dna {
+    order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .header-dna img {
+    max-width: 140px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Language navigation for very small screens */
+  .language-nav {
+    gap: 6px;
+    margin: 15px 0;
+  }
+  
+  .lang-btn {
+    font-size: 14px;
+    padding: 8px 10px;
+    min-width: 70px;
+  }
+  
+  /* Adjust marquee for very small screens - make it bigger */
+  marquee {
+    height: 120px !important;
+    font-size: 13px !important;
+    padding: 12px !important;
+    margin: 10px auto !important;
+    max-width: 98% !important;
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    width: auto !important;
+    display: block !important;
+    background-color: #0066cc !important;
+    color: white !important;
+    border-radius: 4px !important;
+  }
+  
+  /* Override any inline marquee styles */
+  marquee[height] {
+    height: 120px !important;
+  }
+  
+  marquee[width] {
+    width: auto !important;
+    max-width: 98% !important;
+  }
+  
+  /* Make Home link even larger for very small screens */
+  .home-link {
+    font-size: 22px;
+    padding: 15px 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Increase body font size for very small screens */
+  body {
+    font-size: 22px;
+    padding: 10px;
+  }
+  
+  /* Increase paragraph font size for very small screens */
+  p {
+    font-size: 22px;
+    line-height: 1.8;
+  }
+  
+  /* Increase link font size for very small screens */
+  a {
+    font-size: 22px;
+  }
+  
+  /* Ensure main content is properly spaced */
+  .main-content {
+    padding: 15px;
+  }
+}
+
+/* Footer Contact */
+.footer-contact {
+  text-align: center;
+  margin: 25px 0 20px 0;
+  color: var(--text-color);
+  font-size: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+/* Text News Links */
+.textnews {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.textnews:hover {
+  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+/* Override Microsoft Word-generated styles for consistent font sizes */
+.MsoNormal,
+.MsoNormal p,
+p.MsoNormal {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Override bold font-weight for main content */
+.main-content h3,
+.main-content h4 {
+  font-weight: normal !important;
+}
+
+/* Override inline font-size styles */
+[style*="font-size"] {
+  font-size: 18px !important;
+}
+
+/* Specific overrides for common Word-generated font sizes */
+[style*="font-size:14.0pt"],
+[style*="font-size:14pt"],
+[style*="font-size:11.0pt"],
+[style*="font-size:11pt"],
+[style*="font-size:12.0pt"],
+[style*="font-size:12pt"] {
+  font-size: 18px !important;
+}
+
+/* Override larger Word-generated font sizes to be consistent */
+[style*="font-size:16.0pt"],
+[style*="font-size:16pt"],
+[style*="font-size:18.0pt"],
+[style*="font-size:18pt"],
+[style*="font-size:20.0pt"],
+[style*="font-size:20pt"] {
+  font-size: 20px !important;
+}
+
+/* Ensure all text elements have consistent sizing */
+span, div, p, td, th, li {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Override for headings in Word-generated content */
+[style*="font-size:18.0pt"][style*="color:blue"],
+[style*="font-size:18pt"][style*="color:blue"] {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+/* Ensure Chinese text is readable */
+[lang="ZH-CN"], 
+[lang="zh-CN"],
+span[lang="ZH-CN"],
+span[lang="zh-CN"] {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Additional overrides for more specific patterns */
+[style*="font-size:8.0pt"],
+[style*="font-size:8pt"],
+[style*="font-size:10.0pt"],
+[style*="font-size:10pt"],
+[style*="font-size:13.5pt"] {
+  font-size: 18px !important;
+}
+
+/* Override mso-specific font sizes */
+[style*="mso-ansi-font-size"],
+[style*="mso-bidi-font-size"] {
+  font-size: 18px !important;
+}
+
+/* Ensure all Word-generated content uses consistent sizing */
+.MsoNormalTable,
+.MsoNormalTable td,
+.MsoNormalTable th,
+.MsoNormalTable p {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Override any remaining small font sizes */
+[style*="font-size:11.0pt"],
+[style*="font-size:11pt"],
+[style*="font-size:12.0pt"],
+[style*="font-size:12pt"] {
+  font-size: 18px !important;
+}
+
+/* Ensure headings in Word content are properly sized */
+[style*="font-size:18.0pt"][style*="color:blue"],
+[style*="font-size:18pt"][style*="color:blue"],
+[style*="font-size:16.0pt"][style*="color:blue"],
+[style*="font-size:16pt"][style*="color:blue"] {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+/* Override any font-size declarations in style attributes */
+*[style*="font-size"] {
+  font-size: 18px !important;
+}
+
+/* Exception for headings - allow them to be larger */
+h1[style*="font-size"],
+h2[style*="font-size"],
+h3[style*="font-size"],
+h4[style*="font-size"],
+h5[style*="font-size"],
+h6[style*="font-size"] {
+  font-size: inherit !important;
+}
+
+/* Top Navigation */
+.top-nav {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.top-nav a {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* Home Link (for English version) */
+.home-link {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+/* Header Main Grid */
+.header-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Force single column layout on mobile */
+@media (max-width: 768px) {
+  .header-main-grid {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+  }
+}
+
+/* Header Book Section */
+.header-book {
+  text-align: center;
+}
+
+.header-book img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Header Logo Section */
+.header-logo {
+  text-align: center;
+}
+
+.header-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: 1.2em;
+  margin-top: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header-subtitle {
+  font-size: 1em;
+  color: #ff9900;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Header DNA Section */
+.header-dna {
+  text-align: center;
+}
+
+.header-dna img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure marquee is properly contained */
+.header-dna marquee {
+  max-width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.main-article h3, .main-article h4 {
+  text-transform: none !important;
+  font-weight: normal !important;
+} 
